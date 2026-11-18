@@ -29,9 +29,15 @@
         .certificate-card {
             background: #fff;
             padding: 25px;
-            border-radius: 12px;
+            border-radius: 14px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.12);
         }
 
         .certificate-card h3 {
@@ -56,33 +62,21 @@
             margin-top: 22px;
         }
 
-        .cert-actions a,
-        .cert-actions button {
+        .request-btn {
             display: inline-block;
-            padding: 10px 16px;
-            border-radius: 6px;
+            padding: 11px 18px;
+            border-radius: 7px;
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
-            border: none;
-            cursor: pointer;
-        }
-
-        .view-certificate {
             background: #102a43;
             color: white;
+            transition: 0.3s ease;
         }
 
-        .download-certificate {
+        .request-btn:hover {
             background: #d4a017;
             color: #102a43;
-        }
-
-        .cert-actions button:disabled {
-            background: #9ca3af;
-            color: white;
-            cursor: not-allowed;
-            opacity: 0.8;
         }
 
         .pending-message {
@@ -94,6 +88,20 @@
         .section-intro {
             margin-bottom: 30px;
             line-height: 1.7;
+        }
+
+        .privacy-notice {
+            background: #eef6fc;
+            border-left: 5px solid #123b5d;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 8% 0;
+            line-height: 1.8;
+        }
+
+        .privacy-notice h3 {
+            color: #102a43;
+            margin-bottom: 8px;
         }
 
         /* FOOTER */
@@ -115,6 +123,11 @@
         @media (max-width: 600px) {
             .certificates-section {
                 padding: 40px 5%;
+            }
+
+            .privacy-notice {
+                margin-left: 5%;
+                margin-right: 5%;
             }
         }
     </style>
@@ -155,7 +168,7 @@
 
     <!-- PAGE HERO -->
     <section class="hero">
-        <h1>Certificates & Achievements</h1>
+        <h1>🏆 Certificates & Achievements</h1>
 
         <p>
             A collection of my academic qualifications, professional
@@ -165,20 +178,37 @@
     </section>
 
 
+    <!-- PRIVACY NOTICE -->
+    <div class="privacy-notice">
+
+        <h3>🔒 Certificate Access Policy</h3>
+
+        <p>
+            To protect the privacy and authenticity of my documents,
+            certificates are not publicly downloadable.
+            Visitors who require verification or copies of specific
+            documents may submit an access request.
+        </p>
+
+        <p>
+            📩 All requests are reviewed before documents are shared.
+        </p>
+
+    </div>
+
+
     <!-- ACADEMIC QUALIFICATIONS -->
     <section class="certificates-section">
 
-        <h2>Academic Qualifications</h2>
+        <h2>🎓 Academic Qualifications</h2>
 
         <div class="certificates-grid">
 
             <div class="certificate-card">
 
-                <h3>Diploma in Information Communication Technology</h3>
+                <h3>🎓 Diploma in Information Communication Technology</h3>
 
-                <p>
-                    Kinango Technical and Vocational College
-                </p>
+                <p>Kinango Technical and Vocational College</p>
 
                 <p>TVET CDACC Level 6</p>
 
@@ -187,27 +217,15 @@
                 </p>
 
                 <p class="pending-message">
-                    Certificate not yet available – pending issuance.
+                    ⏳ Certificate not yet available – pending issuance.
                 </p>
-
-                <div class="cert-actions">
-
-                    <button class="view-certificate" disabled>
-                        View Certificate
-                    </button>
-
-                    <button class="download-certificate" disabled>
-                        Download Certificate
-                    </button>
-
-                </div>
 
             </div>
 
 
             <div class="certificate-card">
 
-                <h3>Kenya Certificate of Secondary Education (KCSE)</h3>
+                <h3>📘 Kenya Certificate of Secondary Education (KCSE)</h3>
 
                 <p>Bakanja Secondary School</p>
 
@@ -215,16 +233,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/KCSE.pdf"
-                       target="_blank"
-                       class="view-certificate">
-                        View Certificate
-                    </a>
-
-                    <a href="certificates/KCSE.pdf"
-                       download
-                       class="download-certificate">
-                        Download
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=KCSE%20Certificate%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20KCSE%20Certificate.%0A%0AName%3A%0APurpose%3A%0A%0AThank%20you."
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -239,13 +250,13 @@
     <!-- TECHNICAL AND PROFESSIONAL CERTIFICATES -->
     <section class="certificates-section">
 
-        <h2>Technical & Professional Certificates</h2>
+        <h2>💻 Technical & Professional Certificates</h2>
 
         <div class="certificates-grid">
 
             <div class="certificate-card">
 
-                <h3>Computer Packages Certificate</h3>
+                <h3>🖥️ Computer Packages Certificate</h3>
 
                 <p>ChapChap Computer Service Cyber</p>
 
@@ -255,16 +266,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/computer packages certificate.pdf"
-                       target="_blank"
-                       class="view-certificate">
-                        View Certificate
-                    </a>
-
-                    <a href="certificates/computer packages certificate.pdf"
-                       download
-                       class="download-certificate">
-                        Download
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=Computer%20Packages%20Certificate%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20Computer%20Packages%20Certificate.%0A%0AName%3A%0APurpose%3A"
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -274,7 +278,7 @@
 
             <div class="certificate-card">
 
-                <h3>First Aid Training</h3>
+                <h3>🚑 First Aid Training</h3>
 
                 <p>Kenya Red Cross Society</p>
 
@@ -284,16 +288,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/First aid.pdf"
-                       target="_blank"
-                       class="view-certificate">
-                        View Certificate
-                    </a>
-
-                    <a href="certificates/First aid.pdf"
-                       download
-                       class="download-certificate">
-                        Download
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=First%20Aid%20Certificate%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20First%20Aid%20Training%20Certificate.%0A%0AName%3A%0APurpose%3A"
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -303,7 +300,7 @@
 
             <div class="certificate-card">
 
-                <h3>Communication Skills Training</h3>
+                <h3>🗣️ Communication Skills Training</h3>
 
                 <p>Bright Monday</p>
 
@@ -313,16 +310,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/Bright Monday.pdf"
-                       target="_blank"
-                       class="view-certificate">
-                        View Certificate
-                    </a>
-
-                    <a href="certificates/Bright Monday.pdf"
-                       download
-                       class="download-certificate">
-                        Download
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=Communication%20Skills%20Certificate%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20Communication%20Skills%20Certificate.%0A%0AName%3A%0APurpose%3A"
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -337,13 +327,13 @@
     <!-- CDACC ASSESSMENT RESULTS -->
     <section class="certificates-section">
 
-        <h2>CDACC Assessment Results</h2>
+        <h2>📊 CDACC Assessment Results</h2>
 
         <div class="certificates-grid">
 
             <div class="certificate-card">
 
-                <h3>TVET CDACC Assessment Results</h3>
+                <h3>📋 TVET CDACC Assessment Results</h3>
 
                 <ul>
                     <li>Apply Communication Skills</li>
@@ -367,16 +357,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/Results.pdf"
-                       target="_blank"
-                       class="view-certificate">
-                        View Results
-                    </a>
-
-                    <a href="certificates/Results.pdf"
-                       download
-                       class="download-certificate">
-                        Download Results
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=CDACC%20Assessment%20Results%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20TVET%20CDACC%20Assessment%20Results.%0A%0AName%3A%0APurpose%3A"
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -391,13 +374,13 @@
     <!-- LEADERSHIP AND PARTICIPATION -->
     <section class="certificates-section">
 
-        <h2>Leadership & Participation</h2>
+        <h2>🌟 Leadership & Participation</h2>
 
         <div class="certificates-grid">
 
             <div class="certificate-card">
 
-                <h3>Student Council Leadership Training</h3>
+                <h3>🏅 Student Council Leadership Training</h3>
 
                 <p>Balozi Counselling Foundation</p>
 
@@ -407,16 +390,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/Balozi.pdf"
-                       target="_blank"
-                       class="view-certificate">
-                        View Certificate
-                    </a>
-
-                    <a href="certificates/Balozi.pdf"
-                       download
-                       class="download-certificate">
-                        Download
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=Leadership%20Training%20Certificate%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20Student%20Council%20Leadership%20Training%20Certificate.%0A%0AName%3A%0APurpose%3A"
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -426,7 +402,7 @@
 
             <div class="certificate-card">
 
-                <h3>College Student Leadership</h3>
+                <h3>👨‍💼 College Student Leadership</h3>
 
                 <p>Kinango Technical and Vocational College</p>
 
@@ -437,16 +413,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/Leadership.pdf"
-                       target="_blank"
-                       class="view-certificate">
-                        View Certificate
-                    </a>
-
-                    <a href="certificates/Leadership.pdf"
-                       download
-                       class="download-certificate">
-                        Download
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=College%20Leadership%20Document%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20College%20Student%20Leadership%20document.%0A%0AName%3A%0APurpose%3A"
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -456,7 +425,7 @@
 
             <div class="certificate-card">
 
-                <h3>Music & Drama Festival</h3>
+                <h3>🎭 Music & Drama Festival</h3>
 
                 <p>
                     Participation in Coast Regional and National
@@ -465,16 +434,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/Drama.pdf"
-                       target="_blank"
-                       class="view-certificate">
-                        View Certificate
-                    </a>
-
-                    <a href="certificates/Drama.pdf"
-                       download
-                       class="download-certificate">
-                        Download
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=Music%20and%20Drama%20Festival%20Document%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20Music%20and%20Drama%20Festival%20document.%0A%0AName%3A%0APurpose%3A"
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -489,13 +451,13 @@
     <!-- PROFESSIONAL RECOMMENDATION -->
     <section class="certificates-section">
 
-        <h2>Professional Recommendation</h2>
+        <h2>📄 Professional Recommendation</h2>
 
         <div class="certificates-grid">
 
             <div class="certificate-card">
 
-                <h3>Huduma Centre Kilifi</h3>
+                <h3>🏢 Huduma Centre Kilifi</h3>
 
                 <p>
                     Professional recommendation letter issued on
@@ -510,16 +472,9 @@
 
                 <div class="cert-actions">
 
-                    <a href="certificates/Huduma Centre recommendations.PDF"
-                       target="_blank"
-                       class="view-certificate">
-                        View Recommendation
-                    </a>
-
-                    <a href="certificates/Huduma Centre recommendations.PDF"
-                       download
-                       class="download-certificate">
-                        Download
+                    <a href="mailto:vincentkimathi375@gmail.com?subject=Huduma%20Centre%20Recommendation%20Access%20Request&body=Hello%20Vincent%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20your%20Huduma%20Centre%20Kilifi%20Recommendation%20Letter.%0A%0AName%3A%0APurpose%3A"
+                       class="request-btn">
+                        🔒 Request Access
                     </a>
 
                 </div>
@@ -535,7 +490,7 @@
     <footer class="footer">
 
         <p>
-            &copy; 2026 Vincent Kimathi. All Rights Reserved.
+            &copy; 2026 Vincent Kimathi. All Rights Reserved. | 🔒 Privacy Protected
         </p>
 
     </footer>
